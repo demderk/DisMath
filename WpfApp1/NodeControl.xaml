@@ -5,9 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WpfApp1"
              mc:Ignorable="d" 
-             d:DesignHeight="32" d:DesignWidth="32">
+             d:DesignHeight="32" d:DesignWidth="64">
     <Grid Cursor="Hand">
-        <Ellipse Width="32" Height="32" Name="BGEllipse" Fill="Black"></Ellipse>   
+        
+        <Rectangle Width="64" Height="32" Name="BGEllipse" Fill="DarkCyan"></Rectangle>   
         <TextBlock Text="NULL" VerticalAlignment="Center" Name="DataBlock" HorizontalAlignment="Center" Foreground="White"></TextBlock>
     </Grid>
 </UserControl>

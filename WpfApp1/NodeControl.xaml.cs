@@ -42,7 +42,7 @@ namespace WpfApp1
             };
             Node.VisitedChanged += (s, e) =>
             {
-                BGEllipse.Fill = Node.Visited ? Brushes.Gray : Brushes.Black;
+                BGEllipse.Fill = Node.Visited ? Brushes.Blue : Brushes.DarkCyan;
             };
 
         }
@@ -52,9 +52,9 @@ namespace WpfApp1
             second.Node.Children.Add(first.Node);
             first.Node.Children.Add(second.Node);
             Line bind = new Line();
-            bind.X1 = first.Position.X;
+            bind.X1 = first.Position.X+16;
             bind.Y1 = first.Position.Y;
-            bind.X2 = second.Position.X;
+            bind.X2 = second.Position.X+16;
             bind.Y2 = second.Position.Y;
             bind.StrokeThickness = 1;
             bind.Stroke = Brushes.Black;

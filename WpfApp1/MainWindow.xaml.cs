@@ -97,15 +97,15 @@ namespace WpfApp1
                 }
             }
             Snapshots.Add(elements);
-            SnapshotsControl.Items.Add("Snapshot");
+            SnapshotsControl.Items.Add($"Шаг {Snapshots.Count}");
         }
 
         private void SnapshotsControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             CanvasInk.Children.Clear();
-            for (int i = 0; i < Snapshots[SnapshotsControl.SelectedIndex - 1 == -1 ? 0 : SnapshotsControl.SelectedIndex - 1].Count; i++)
+            for (int i = 0; i < Snapshots[SnapshotsControl.SelectedIndex].Count; i++)
             {
-                CanvasInk.Children.Add(Snapshots[SnapshotsControl.SelectedIndex - 1 == -1 ? 0 : SnapshotsControl.SelectedIndex - 1][i]);
+                CanvasInk.Children.Add(Snapshots[SnapshotsControl.SelectedIndex][i]);
             }
         }
     }
